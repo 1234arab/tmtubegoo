@@ -1,0 +1,393 @@
+
+
+<html lang="en">
+  <head>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.material-icons {
+  color: rgb(96, 96, 96);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left img {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.header i {
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+.header__search form {
+  border: 1px solid #ddd;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__search input {
+  width: 500px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+}
+
+.header__search button {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+/* Sidebar */
+.mainBody {
+  height: calc(100vh - 70px);
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.sidebar__categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.sidebar__category {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+}
+
+.sidebar__category span {
+  margin-left: 15px;
+}
+
+.sidebar__category:hover {
+  background: #e5e5e5;
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+}
+
+/* videos */
+
+.videos {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+}
+
+.videos__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video {
+  width: 310px;
+margin-left: 40;
+  margin-top: 30px;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.video__details1 {
+  display: flex;
+  margin-top: 10px;
+}
+.video__details {
+  display: flex;
+  margin-top: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(3, 3, 3);
+}
+
+@media (max-width: 425px) {
+  .header__search {
+    display: none;
+  }
+
+  .header__icons .material-icons {
+    display: none;
+  }
+
+  .header__icons .display-this {
+    display: inline;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__search {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+.video__details {
+  margin-left: 20px;
+  display: flex;
+  margin-top: 40px;
+}
+.text_size1 {
+  margin-left: 10px;
+  display: flex;
+  margin-top: 30px;
+}
+.text_size {
+  margin-left: 10px;
+  display: flex;
+  margin-top: 20px;
+}
+  .show-sidebar {
+    display: inline;
+    position: fixed;
+    top: 4.4rem;
+    height: auto;
+  }
+}
+.cyzgy_ucin {
+  margin-left: 20px;
+  display: flex;
+  margin-top: 25px;
+}
+
+@media (max-width: 941px) {
+  .header__search input {
+    width: 300px;
+  }
+}
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Material Icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Final - Youtube UI Clone</title>
+  </head>
+  <body>
+    <!-- Header Starts -->
+    <div class="header">
+      <div class="header__left">
+        <i id="menu" class="material-icons">menu</i>
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6a193d20071539.562e509e78154.jpg" style="width:60px;height:50px;">
+      </div>
+
+      <div class="header__search">
+        <form action="">
+          <input type="text" placeholder="Search" />
+          <button><i class="material-icons">search</i></button>
+        </form>
+      </div>
+
+      <div class="header__icons">
+        <i class="material-icons display-this">search</i>
+        <i class="material-icons">videocam</i>
+        <i class="material-icons">apps</i>
+        <i class="material-icons">notifications</i>
+        <i class="material-icons display-this">account_circle</i>
+      </div>
+    </div>
+    <!-- Header Ends -->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.css" />
+    </head>
+    <body>
+        <video class="op-player__media" id="player" controls playsinline
+        poster="https://m.horjuntv.com.tm/videoupload/hq720/944782d8nOl7fX9.jpg">
+            <source src="https://bravo.horjuntv.com.tm/onlinetv2/2023/01/03/944782d8nOl7fX9/944782d8nOl7fX9.m3u8" type="video/mp4" />
+              
+            <track kind="subtitles" src="/path/to/video.vtt" srclang="en" label="English" />
+        </video>
+      
+        <script src="https://cdn.jsdelivr.net/npm/openplayerjs@latest/dist/openplayer.min.js"></script>
+        <script>
+            // Check the `API and events` link below for more options
+            const player = new OpenPlayerJS('player');
+            player.init();
+        </script>
+                <div class="text_size1"
+               <h1>
+                 Новый год 2023 на ТНТ ＂ХАРЛАМОВ ПРОТИВ COMEDY
+                </h1>
+                </div>
+        <div class="text_size"
+               <span>
+               👁️3.4müñ Görülme • 1hepde öň
+                </span>
+                </div>
+         <div class="video__details">
+              <div class="author">
+               <a href=""><img src="https://m.horjuntv.com.tm/videoupload/hq720/68031Pz8FB3QQh9.jpg" alt="HTML"></a>
+              </div>
+ <div class="title">
+               <a href="https://ulgamda.com"> <h2>
+                 Comedy
+                </h2></a>
+              </div>
+</html>
+<div class="cyzgy_ucin"></div><hr style="height:2px;border-width:10%;color:gray;background-color:gray"></div>
+         <html><div class="video">
+            <div class="video__thumbnail">
+             <a href="https://1234arab.github.io/tmtubegoo/masa.html" <img src="https://m.horjuntv.com.tm/videoupload/hq720/946433bDQPUElWs.jpg" alt="" /></a>
+            </div>
+            <div class="video__details1">
+              <div class="author">
+                <img src="https://m.horjuntv.com.tm/videoupload/hq720/96274a91pk4wDFF.jpg" alt="" />
+              </div>
+                <div class="title">
+                <h3>Маша и Медведь в кино: 12 месяцев (2022)</h3>
+                <a href="">Multiple</a>
+                <span>234 Görülme • 3gün öñ</span
+                ></html>
+
+
+<div class="cyzgy_ucin"></div><hr style="height:2px;border-width:10%;color:gray;background-color:gray"></div>
+         <html><div class="video">
+            <div class="video__thumbnail">
+              <a href="https://1234arab.github.io/tmtubegoo/sultan.html">
+              <img src="https://m.horjuntv.com.tm/videoupload/hq720/96642jA19a5zAyl.jpg" alt="" /></a>
+            </div>
+            <div class="video__details1">
+              <div class="author">
+                <img src="https://m.horjuntv.com.tm/videoupload/avatar/188bcDFAwYvz9.jpg" alt="" />
+              </div>
+                <div class="title">
+                <h3>Султан Лагучев - Коронована мадам</h3>
+                <a href="">Star Music</a>
+                <span>1.2müň • 1 aý öñ.</span
+                ></html>
+
+
+<div class="cyzgy_ucin"></div><hr style="height:2px;border-width:10%;color:gray;background-color:gray"></div>
+         <html><div class="video">
+            <div class="video__thumbnail">
+              <a href="https://1234arab.github.io/tmtubegoo/dvoy.html"><img src="https://m.horjuntv.com.tm/videoupload/hq720/96792pRjj6hPt77.jpg" alt="" /></a>
+            </div>
+            <div class="video__details1">
+              <div class="author">
+                <img src="https://m.horjuntv.com.tm/videoupload/avatar/2276W8VfV3WsRj.jpg" alt="" />
+              </div>
+                <div class="title">
+                <h3>Двойное петля(2022)</h3>
+                <a href="">Kinostar</a>
+                <span>2.1müñ Görülme • 2hepde öñ.</span
+                ></html>
+
+
+<div class="cyzgy_ucin"></div><hr style="height:2px;border-width:10%;color:gray;background-color:gray"></div>
+ 
+  
+    <script>
+const menu = document.querySelector('#menu');
+      console.log(menu);
+      const sidebar = document.querySelector('.sidebar');
+      console.log(sidebar);
+      
+      menu.addEventListener('click', function() {
+        sidebar.classList.toggle('show-sidebar');
+      });
+    </script>
+    <!-- Main Body Ends -->
+  </body>
+</html>
