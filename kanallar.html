@@ -1,0 +1,384 @@
+<html lang="en">
+  <head>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.owner{
+
+    display: flex;
+
+    align-items: center;
+    margin-top: 30px;
+}
+
+.owner div{
+    flex: 1;
+    line-height: 18px;   
+}
+
+.owner img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.owner p{
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+.owner span{
+    font-size: 13px;
+    color: #5a5a5a;
+}
+
+
+.owner button{
+    background:black;
+    color: #fff;
+    padding: 8px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.material-icons {
+  color: rgb(96, 96, 96);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 15px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+.header__left img {
+  width: 100px;
+  margin-left: 15px;
+}
+
+.header i {
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+.header__search form {
+  border: 1px solid #ddd;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__search input {
+  width: 500px;
+  padding: 10px;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  height: 100%;
+}
+
+.header__search button {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+/* Sidebar */
+.mainBody {
+  height: calc(100vh - 70px);
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+.sidebar__categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.sidebar__category {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+}
+
+.sidebar__category span {
+  margin-left: 15px;
+}
+
+.sidebar__category:hover {
+  background: #e5e5e5;
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
+}
+
+/* videos */
+
+.videos {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+}
+
+.videos__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.video {
+  width: 310px;
+
+  margin-bottom: 60px;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: 170px;
+}
+
+.video__thumbnail img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.video__details {
+  display: flex;
+  margin-top: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(3, 3, 3);
+}
+
+@media (max-width: 425px) {
+  .header__search {
+    display: auto;
+  }
+
+  .header__icons .material-icons {
+    display: none;
+  }
+
+  .header__icons .display-this {
+    display: inline;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__search {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .show-sidebar {
+    display: inline;
+    position: fixed;
+    top: 4.4rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 941px) {
+  .header__search input {
+    width: 300px;
+  }
+}
+.cyzgy_ucin {
+  margin-left: 20px;
+  display: flex;
+  margin-top: 25px;
+}
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Material Icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tmtubegoo</title>
+  </head>
+  <body>
+   
+    <!-- Header Starts -->
+    <div class="header">
+      <div class="header__left">
+        <i id="menu" class="material-icons">menu</i>
+         <img
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/6a193d20071539.562e509e78154.jpg" style="width:60px;height:50px;">
+      </div>
+
+      <div class="header__search">
+        <form action="">
+          <input type="text" placeholder="Search" />
+          <button><i class="material-icons">search</i></button>
+        </form>
+      </div>
+
+      <div class="header__icons">
+        <i class="material-icons display-this">search</i>
+        <i class="material-icons">videocam</i>
+        <i class="material-icons">apps</i>
+        <i class="material-icons">notifications</i>
+        
+      </div>
+    </div>
+      <div class="owner">
+
+                    <img src="https://v.gozle.com.tm/media/avatar/21/UCi-fZgWfcUCEivP626cIcNQ.png">
+
+                    <div>
+                        <p>Mert Gültaş</p>
+                       <span>__________________________</span>
+                        
+                    </div><a href="https://1234arab.github.io/tmtubegoo/mertkanal.html">
+                    <button type="button">Kanalyň wideolary</button></a>
+
+                </div>
+
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="mainBody">
+      <!-- Sidebar Starts -->
+      <div class="sidebar">
+        <div class="sidebar__categories">
+          <div class="sidebar__category">
+            <i class="material-icons">home</i>
+            <a href="https://1234arab.github.io/tmtubegoo/youtube.html"><span>Baş sahypa</span>
+          </div></a>
+          <div class="sidebar__category">
+            <i class="material-icons">subscriptions</i>
+           <a href="https://1234arab.github.io/tmtubegoo/kanallar.html" ><span>Kanallar</span></a>
+          </div>
+        </div>
+        <hr />
+        <div class="sidebar__categories">
+          <div class="sidebar__category">
+            <i class="material-icons">tv</i>
+            <span>Online TV</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">gesture</i>
+            <span>Degişmeler</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">group_work</i>
+            <span>Kinofilmler</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">settings_input_svideo</i>
+            <span>Multifilmler</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">subdirectory_arrow_right</i>
+            <span>Biz barada</span>
+          </div>
+        </div>
+        <hr />
+      </div>
+    <script>
+const menu = document.querySelector('#menu');
+      console.log(menu);
+      const sidebar = document.querySelector('.sidebar');
+      console.log(sidebar);
+      
+      menu.addEventListener('click', function() {
+        sidebar.classList.toggle('show-sidebar');
+      });
+    </script>
+    <script>
+      function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+    </script>
+    <!-- Main Body Ends -->
+  </body>
+</html>
